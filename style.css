@@ -126,3 +126,16 @@ button{
     width:2px;
     scrollbar-color:#fff transparent;
 }
+@media screen  and (max-width:360px){
+    nav{
+      flex-direction: column;
+    }
+    .wordsearch{
+      flex-direction: column;
+      gap: 20px;
+      align-content: center;
+    }
+    .wordoftheday{
+      margin-top: 20px;
+    }
+}
