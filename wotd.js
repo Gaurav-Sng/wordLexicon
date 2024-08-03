@@ -16,30 +16,30 @@ const fetchDefinition= async (word)=>{
     const div=document.createElement('div');
     div.classList.add('worked');
     
-    //const exact=data.meaning.definitions.definition;
+    
     data.forEach(entry => {
         let a=document.createElement('p');
         a.innerHTML=`<b>Word:</b>${word}`;
         div.appendChild(a);
-        console.log(`word:${word}`);
+       
         
         entry.meanings.forEach(meaning => {
         let b=document.createElement('p');
            b.innerHTML=`<b>Part of Speech:</b>${meaning.partOfSpeech}`;
-           console.log(`Part of Speech:${meaning.partOfSpeech}`)
+          
            div.appendChild(b);
          
     
           meaning.definitions.forEach(definition => {
            let c=document.createElement('p');
             c.innerHTML=`<b>Definition:</b> ${definition.definition}`;
-            console.log(`Definition: ${definition.definition}`)
+          
             div.appendChild(c);
            
             if (definition.example) {
                 let d=document.createElement('p');
                 d.innerHTML=`<b>Example:</b> ${definition.example}`;
-                console.log(`Example: ${definition.example}`);
+                
                 div.appendChild(d);
               
             }
@@ -66,13 +66,11 @@ const fetchRandomWord = async () => {
           if (!val.ok) {
               throw new Error('Failed to fetch random word');
           }
-           // const wordfortheday=document.querySelector('.todaysword');
+          
           const data = await val.json();
           const randomWord = data[0];
-        //   let p=document.createElement('p');
-        //    p.innerHTML=`<b>Word:  </b>${randomWord}`;
-        //   wordfortheday.append(p);
-          console.log(`Random Word: ${randomWord}`);
+      
+         
           fetchDefinition(randomWord);
       } catch (error) {
           console.error(error);
