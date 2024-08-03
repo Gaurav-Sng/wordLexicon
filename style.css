@@ -128,7 +128,7 @@ button{
     width:2px;
     scrollbar-color:#fff transparent;
 }
-@media screen  and (max-width:360px){
+@media screen  and (max-width:514px){
     nav{
       flex-direction: column;
         justify-content:center;
