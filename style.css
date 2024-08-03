@@ -57,17 +57,17 @@ input{
    height: 2rem;
    width: 90%;
    margin-right: 20px;
-   padding: 10px;
-   font-size: 1.3rem;
+   padding: 25px;
+   font-size: 1.4rem;
 }
 button{
    padding: 5px 9px;
    border-radius: 10px;
    border: 2px solid black;
    margin-right: 2rem;
-   /* background: #000; */
+    background: #221b1b; 
 
-   /* color: white; */
+    color: white; 
    font-size: 1.2rem;
   cursor: pointer;
 }
@@ -117,4 +117,12 @@ button{
    border-radius: 15px;
    padding: 15px;
    display: none;
+}
+.wordinfo:: -webkit-scrollbar{
+    width:1px;
+    srollbar-color:#fff transparent;
+}
+.todaysword::-webkit-scrollbar{
+    width:2px;
+    scrollbar-color:#fff transparent;
 }
